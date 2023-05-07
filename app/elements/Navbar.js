@@ -35,8 +35,17 @@ export default function Navbar() {
                 Orders
               </a>
             </li>
+          <li className="nav-item">
+            <a className="nav-link" href="/login">
+              Login
+            </a>
+          </li>
+          <li className="nav-item">
+            <a className="nav-link" href="/logout">
+              logout
+            </a>
+          </li>
           </ul>
-
           <form className="d-flex" role="search">
             <input
               className="form-control me-2"
