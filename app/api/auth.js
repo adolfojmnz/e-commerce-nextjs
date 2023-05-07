@@ -82,6 +82,7 @@ export async function interceptExpiredTokenResponse(url, options) {
   if (!refreshResponse.ok) {
     return response;
   }
+  console.log('refreshed token:', refreshResponse.access);
   localStorage.setItem('access', refreshResponse.access);
   const newOptions = {
     ...options,
