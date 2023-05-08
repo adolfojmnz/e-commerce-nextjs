@@ -25,8 +25,6 @@ export default function ProductList() {
     return <h5>Product List Unavailable!</h5>
   }
 
-  console.log(products)
-
   return (
     products.map((product) => (
     <div className="row product" key={product.id}>

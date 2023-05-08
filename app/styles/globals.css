@@ -72,7 +72,6 @@ header {
 }
 
 .product-price {
-  font-weight: bold;
   font-size: 140%;
 }
 
@@ -102,4 +101,11 @@ a.product-detail-anchor {
 .cart-summary-content {
   padding: 0.2rem 0.2rem;
   padding-top: 0.5rem;
+}
+
+.order-item {
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  padding: 1rem 0;
+  margin: 1rem 0;
 }
