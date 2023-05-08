@@ -1,6 +1,7 @@
 import { useEffect, useState } from 'react';
 import { getCart } from '../../api/cart';
 import { getCartItems } from '../../api/cart';
+import { processOrder } from '../../api/orders';
 import CartItemList from './CartItemList';
 
 
@@ -37,6 +38,21 @@ export default function Cart() {
     setCartItems(data);
   }
 
+  async function handleCheckout(event) {
+    event.preventDefault();
+    try {
+      const response = await processOrder();
+      if (!response.ok) {
+        throw new Error(response.statusText);
+      }
+      const data = await response.json();
+      window.location.href = `/orders/${data.id}`;
+    } catch (error) {
+      console.error(error);
+      setError(error);
+    }
+  }
+
   useEffect(() => {
     try {
       getCartData();
@@ -65,6 +81,10 @@ export default function Cart() {
           <p>Last Updated: </p>
           <p>{getDate(cart.updated_on)}</p>
           <p>at {getTime(cart.updated_on)}</p>
+
+          <form className='checkout-form' method='POST' onSubmit={handleCheckout}>
+            <button type='submit' className='btn btn-success'>Checkout</button>
+          </form>
         </div>
       </div>
     </div>
