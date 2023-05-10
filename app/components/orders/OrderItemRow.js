@@ -11,7 +11,7 @@ export default function OrderItemRow(data) {
       </div>
       <div className="col-7 product-detail">
         <h5>{orderItem.product_values.name}</h5>
-        <p>Brand: {orderItem.product.brand}</p>
+        <p>Brand: {orderItem.product_values.brand}</p>
         <p>Vendor: {orderItem.product_values.vendor}</p>
         <p>Product price: $ {orderItem.product_values.price}</p>
       </div>

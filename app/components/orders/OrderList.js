@@ -28,14 +28,31 @@ export default function OrderList() {
   }
 
   if (orders.length === 0) {
-    return <h5>No orders found!</h5>;
+    return (
+      <div className="container">
+        <div className="row">
+          <header className="col">
+            <h3>Orders</h3>
+          </header>
+        </div>
+        <div className="row">
+          <div className="col">
+            <h5>No orders found!</h5>
+          </div>
+        </div>
+      </div>
+    )
   }
 
   return (
     <div className="container">
       <div className="row">
-        <div className="col">
+        <header className="col">
           <h3>Orders</h3>
+        </header>
+      </div>
+      <div className="row">
+        <div className="col">
           <table className="table table-striped">
             <thead>
               <tr>
