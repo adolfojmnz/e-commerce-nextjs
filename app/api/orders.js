@@ -12,7 +12,7 @@ export async function processOrder() {
 }
 
 export async function getOrders() {
-  const url = 'http://localhost:8000/api/orders';
+  const url = 'http://localhost:8000/api/orders?user=current';
   const options = {
     method: 'GET',
     headers: getAuthorizationHeaders()
