@@ -31,3 +31,6 @@ yarn-error.log*
 
 # Sysbolink link to backend project
 .backend
+
+# vscode
+.vscode
