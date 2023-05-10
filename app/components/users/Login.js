@@ -49,45 +49,59 @@ export default function Login() {
 
   return (
     <form className="" onSubmit={handleSubmit}>
-      <div className="container">
+      <div className="container text-center">
         <div className="row">
           <header className="col">
             <h1>Login</h1>
           </header>
         </div>
         <div className="row">
-          <div className="col col-lg-5">
-            <label htmlFor="username" className="form-label">
-              Username
-            </label>
-            <input
-              onChange={handleUsernameChange}
-              type="username"
-              className="form-control"
-              id="username"
-              aria-describedby="usernamelHelp"
-            />
+          <div className="col-3"></div>
+          <div className="col">
+            <div className="row">
+              <div className="col">
+                <label htmlFor="username" className="form-label">
+                  Username
+                </label>
+                <input
+                  onChange={handleUsernameChange}
+                  type="username"
+                  className="form-control"
+                  id="username"
+                  aria-describedby="usernamelHelp"
+                />
+              </div>
+            </div>
+            <div className="row">
+              <div className="col">
+                <label htmlFor="password" className="form-label">
+                  Password
+                </label>
+                <input
+                  onChange={handlePasswordChange}
+                  type="password"
+                  className="form-control"
+                  id="password"
+                />
+              </div>
+            </div>
           </div>
-        </div>
-        <div className="row">
-          <div className="col- col-lg-5">
-            <label htmlFor="password" className="form-label">
-              Password
-            </label>
-            <input
-              onChange={handlePasswordChange}
-              type="password"
-              className="form-control"
-              id="password"
-            />
-          </div>
+          <div className="col-3"></div>
         </div>
         <button type="submit" className="btn btn-secondary login-button">
           Login
         </button>
-        <button type="button" className="btn btn-secondary login-button">
-          <a href="/users/register">Register</a>
-        </button>
+        <div className="row">
+          <div className="col">
+            <p>Don't have an account?</p>
+            <button
+              type="button"
+              className="btn btn-secondary"
+              onClick={() => window.location.href = '/register'}
+            > Register
+            </button>
+          </div>
+        </div>
       </div>
     </form>
   );

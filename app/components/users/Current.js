@@ -31,7 +31,15 @@ export default function CurrentUserProfile() {
   }
 
   if (!user) {
-    return <div>Loading...</div>;
+  return (
+    <div className="container">
+      <div className="row">
+        <div className="col">
+          <h1>Loading...</h1>
+        </div>
+      </div>
+    </div>
+  )
   }
 
   return (

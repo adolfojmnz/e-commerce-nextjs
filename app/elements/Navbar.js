@@ -1,8 +1,21 @@
+import { useEffect } from "react";
+
 export default function Navbar() {
+
+  useEffect(() => {
+    if (localStorage.getItem('authenticated') === 'true') {
+      document.getElementById('login').style.display = 'none';
+      document.getElementById('logout').style.display = 'block';
+    } else {
+      document.getElementById('login').style.display = 'block';
+      document.getElementById('logout').style.display = 'none';
+      document.getElementById('profile').style.display = 'none';
+    }
+  }, []);
+
   return (
     <div className="container">
       <div className="row">
-
         <div className="col">
           <nav className="navbar navbar-expand-lg bg-body-tertiary border-bottom">
             <div className="container-fluid">
@@ -20,9 +33,7 @@ export default function Navbar() {
               >
                 <span className="navbar-toggler-icon" />
               </button>
-
               <div className="collapse navbar-collapse" id="navbarSupportedContent">
-
                 <ul className="navbar-nav me-auto mb-2 mb-lg-0">
                   <li className="nav-item">
                     <a className="nav-link" href="/products">
@@ -39,17 +50,17 @@ export default function Navbar() {
                       Orders
                     </a>
                   </li>
-                  <li className="nav-item">
+                  <li className="nav-item" id="login">
                     <a className="nav-link" href="/session/login">
-                      Login
+                      Login/Register
                     </a>
                   </li>
-                  <li className="nav-item">
+                  <li className="nav-item" id="logout">
                     <a className="nav-link" href="/session/logout">
                       logout
                     </a>
                   </li>
-                  <li className="nav-item">
+                  <li className="nav-item" id="profile">
                     <a className="nav-link" href="/users/current">
                       Profile
                     </a>
@@ -59,11 +70,7 @@ export default function Navbar() {
             </div>
           </nav>
         </div>
-
+      </div>
     </div>
-    </div>
-
-
-
   );
 }
