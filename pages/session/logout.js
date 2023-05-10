@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import { logout } from '../app/api/auth';
+import { logout } from '../../app/api/auth';
 
 
 export default function Logout() {

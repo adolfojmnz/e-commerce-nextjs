@@ -1,4 +1,4 @@
-import OrderList from "../app/components/orders/OrderList";
+import OrderList from "../../app/components/orders/OrderList";
 
 
 export default function Orders() {
