@@ -41,6 +41,11 @@ export default function Navbar() {
                     </a>
                   </li>
                   <li className="nav-item">
+                    <a className="nav-link" href="/categories">
+                      Categories
+                    </a>
+                  </li>
+                  <li className="nav-item">
                     <a className="nav-link" href="/cart">
                       Cart
                     </a>
