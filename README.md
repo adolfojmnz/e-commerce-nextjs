@@ -1,10 +1,10 @@
 ## E Commerce Netx.Js App
 
 ### Description
-This APP integrates with the [E-Commerce-API](https://github.com/Eadwulf/e-commerce-API), an API that I developed in Django using Django Rest Framework and PostgreSQL database.
+This APP integrates with the [E-Commerce-API](https://github.com/Eadwulf/e-commerce-API), an API that I developed with Django, Django Rest Framework, and a PostgreSQL database.
 
 ### In development, but
-So far the app possess functionalities for product listing, products details, shopping cart, checkout, orders listing and order details
+So far this app possesses functionalities for product listing, product details, shopping cart, checkout, order listing, and order details.
 
 ### App Screenshots
 
